@@ -1,0 +1,3046 @@
+{
+	"info": {
+		"_postman_id": "ff53721b-8c95-4ca0-a966-e932c28352ae",
+		"name": "大虎鲸2.1版本",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "前端",
+			"item": [
+				{
+					"name": "统计系统",
+					"item": [
+						{
+							"name": "tj.dahujing.com",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "V",
+										"value": "v3",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "dk",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "15280073791",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "http://api2.xiaoyachongdev.com/tongji",
+									"protocol": "http",
+									"host": [
+										"api2",
+										"xiaoyachongdev",
+										"com"
+									],
+									"path": [
+										"tongji"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tj.dahujing.com图表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v3"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "dk",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "15280073791",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "http://api2.xiaoyachongdev.com/charts",
+									"protocol": "http",
+									"host": [
+										"api2",
+										"xiaoyachongdev",
+										"com"
+									],
+									"path": [
+										"charts"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "官网",
+					"item": [
+						{
+							"name": "【官网】意向客户-解股",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "dk",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "15280073791",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "http://api.dahujingdev.com/user/intention",
+									"protocol": "http",
+									"host": [
+										"api",
+										"dahujingdev",
+										"com"
+									],
+									"path": [
+										"user",
+										"intention"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "后台",
+			"item": [
+				{
+					"name": "意向客户",
+					"item": [
+						{
+							"name": "意向客户-解股列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "http://api.dahujing.com/mp/intention?page=1&limit=2",
+									"protocol": "http",
+									"host": [
+										"api",
+										"dahujing",
+										"com"
+									],
+									"path": [
+										"mp",
+										"intention"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "意向客户-解股详情",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "dk",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "15280073795",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "http://api.dahujingdev.com/mp/intention/3",
+									"protocol": "http",
+									"host": [
+										"api",
+										"dahujingdev",
+										"com"
+									],
+									"path": [
+										"mp",
+										"intention",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "意向客户-解股编辑",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "dk",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "15280073795",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "水电费",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "http://api.dahujingdev.com/mp/intention",
+									"protocol": "http",
+									"host": [
+										"api",
+										"dahujingdev",
+										"com"
+									],
+									"path": [
+										"mp",
+										"intention"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "意向客户-解股提交",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "dk",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "15280073792",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "http://api.dahujingdev.com/mp/intention",
+									"protocol": "http",
+									"host": [
+										"api",
+										"dahujingdev",
+										"com"
+									],
+									"path": [
+										"mp",
+										"intention"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "意向客户-解股删除",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "ids",
+											"value": "5",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "http://api.dahujingdev.com/mp/intention",
+									"protocol": "http",
+									"host": [
+										"api",
+										"dahujingdev",
+										"com"
+									],
+									"path": [
+										"mp",
+										"intention"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "净值",
+					"item": [
+						{
+							"name": "历史净值上传 - 策略",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "V",
+										"value": "v2",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "SessionId",
+										"value": "{{SESSIONID}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/nitian/www/xiaoyachong/大虎鲸/历史净值模板-策略.xls"
+										},
+										{
+											"key": "strategy_id",
+											"value": "4",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/upload/strategy",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"upload",
+										"strategy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "净值上传 - 每日收益",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/nitian/www/xiaoyachong/大虎鲸/净值模板-每日收益.xlsx"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/upload/profit",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"upload",
+										"profit"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "策略",
+					"item": [
+						{
+							"name": "策略列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "V",
+										"value": "v2",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "SessionId",
+										"value": "{{SESSIONID}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "account",
+											"value": "dahujing",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "xyc2020",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/strategy?page=1&limit=10",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"strategy"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "策略编辑",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "account",
+											"value": "dahujing",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "xyc2020",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/strategy",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"strategy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "策略添加",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "author",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "brief",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "000016.SH",
+											"type": "text"
+										},
+										{
+											"key": "expect",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "is_lock",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "111",
+											"type": "text"
+										},
+										{
+											"key": "risk",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "style",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "tag",
+											"value": "ad",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/strategy",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"strategy"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "提现",
+					"item": [
+						{
+							"name": "提现列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/tixian?page=1&limit=10&is_bzj=0&status=",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"tixian"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "is_bzj",
+											"value": "0"
+										},
+										{
+											"key": "status",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "提现-详情",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "V",
+										"value": "v2",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "SessionId",
+										"value": "{{SESSIONID}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/tixian/28",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"tixian",
+										"28"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "提现-编辑",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "V",
+										"value": "v2",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "SessionId",
+										"value": "{{SESSIONID}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "28",
+											"description": "id",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "2",
+											"description": "状态：0待提现，1审核通过，2提现成功，3提现失败，4审核不通过",
+											"type": "text"
+										},
+										{
+											"key": "tixian_no",
+											"value": "sk1sdf3",
+											"description": "流水号",
+											"type": "text"
+										},
+										{
+											"key": "realname",
+											"value": "小王",
+											"description": "姓名",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cardno",
+											"value": "1231231231212121",
+											"description": "卡号",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/tixian",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"tixian"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "退款",
+					"item": [
+						{
+							"name": "退款列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "account",
+											"value": "dahujing",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "xyc2020",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/tixian?page=1&limit=10&is_bzj=1&status=",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"tixian"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "is_bzj",
+											"value": "1"
+										},
+										{
+											"key": "status",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "退款-详情",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "V",
+										"value": "v2",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "SessionId",
+										"value": "{{SESSIONID}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/tixian/16",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"tixian",
+										"16"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "退款-编辑",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "V",
+										"value": "v2",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "SessionId",
+										"value": "{{SESSIONID}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "28",
+											"description": "id",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "状态：0待提现，1审核通过，2提现成功，3提现失败，4审核不通过",
+											"type": "text"
+										},
+										{
+											"key": "tixian_no",
+											"value": "sk121312312",
+											"description": "流水号",
+											"type": "text"
+										},
+										{
+											"key": "realname",
+											"value": "小王",
+											"description": "姓名",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cardno",
+											"value": "1231231231212121",
+											"description": "卡号",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/tixian",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"tixian"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "用户",
+					"item": [
+						{
+							"name": "用户详情",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/user/97",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"user",
+										"97"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "用户列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/user?nickname=12",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "97",
+											"disabled": true
+										},
+										{
+											"key": "mobile",
+											"value": "15280073",
+											"disabled": true
+										},
+										{
+											"key": "nickname",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改用户信息",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "97",
+											"description": "id",
+											"type": "text"
+										},
+										{
+											"key": "nickname",
+											"value": "dk",
+											"description": "用户名",
+											"type": "text"
+										},
+										{
+											"key": "realname",
+											"value": "11",
+											"description": "真实姓名",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "15280073791",
+											"description": "手机号",
+											"type": "text"
+										},
+										{
+											"key": "is_agent",
+											"value": "4",
+											"description": "0不是代理，1-5对应星级",
+											"type": "text"
+										},
+										{
+											"key": "expired_date",
+											"value": "2021-06-03",
+											"description": "过期时间",
+											"type": "text"
+										},
+										{
+											"key": "vip",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "province",
+											"value": "福建省",
+											"description": "省份",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "厦门市",
+											"description": "市",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/user",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "后台-客户列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/account/all?id=97",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"account",
+										"all"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "97"
+										},
+										{
+											"key": "nickname",
+											"value": "12",
+											"disabled": true
+										},
+										{
+											"key": "mobile",
+											"value": "152",
+											"disabled": true
+										},
+										{
+											"key": "realname",
+											"value": "a",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "后台-代理商列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "V",
+										"type": "text",
+										"value": "v2"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{TOKEN}}"
+									},
+									{
+										"key": "SessionId",
+										"type": "text",
+										"value": "{{SESSIONID}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{API_DAHUJINGDEV}}mp/agent?id=&nickname=12&mobile=152&realname=a",
+									"host": [
+										"{{API_DAHUJINGDEV}}mp"
+									],
+									"path": [
+										"agent"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": ""
+										},
+										{
+											"key": "nickname",
+											"value": "12"
+										},
+										{
+											"key": "mobile",
+											"value": "152"
+										},
+										{
+											"key": "realname",
+											"value": "a"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "27bf6e4b-396b-4ba6-ab9c-85109f42aac0",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0dfbb5b2-6333-4652-8b50-87665c790572",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "订单结算信息",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}mp/order/settle?id=295",
+							"host": [
+								"{{API_DAHUJINGDEV}}mp"
+							],
+							"path": [
+								"order",
+								"settle"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "295"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "订单列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}mp/order?is_commission=2&page=2&limit=5",
+							"host": [
+								"{{API_DAHUJINGDEV}}mp"
+							],
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "is_commission",
+									"value": "2",
+									"description": "0未结算 1已结算 2待结算"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "订单结算",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "295",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}mp/order/settle",
+							"host": [
+								"{{API_DAHUJINGDEV}}mp"
+							],
+							"path": [
+								"order",
+								"settle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "account",
+									"value": "dahujing",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "xyc2020",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}mp/login",
+							"host": [
+								"{{API_DAHUJINGDEV}}mp"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "035dbd4f-0503-45fd-be12-4fac54bdeb46",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9f2e9de0-77eb-4538-a136-39f79aaf8236",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "公众号",
+			"item": [
+				{
+					"name": "统一下单-增加支付宝",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "v",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "scene",
+									"value": "pre",
+									"description": "场景；pre:策略下单；rec:个人中心充值；age:成为代理商费用缴纳；upg:升级代理商；you:开通条件选股",
+									"type": "text"
+								},
+								{
+									"key": "strategy",
+									"value": "4",
+									"description": "策略ID scene == pre时必须上传",
+									"type": "text"
+								},
+								{
+									"key": "quota",
+									"value": "6",
+									"description": "配资ID scene == pre时必须上传",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "0.01",
+									"description": "充值金额 scene == rec时必须上传",
+									"type": "text"
+								},
+								{
+									"key": "level",
+									"value": "2",
+									"description": "代理商等级(获取代理商支付配置接口获取) scene == age时必须上传",
+									"type": "text"
+								},
+								{
+									"key": "up_level",
+									"value": "3",
+									"description": "升级代理商等级(获取代理商支付配置接口获取) scene == upg时必须上传",
+									"type": "text"
+								},
+								{
+									"key": "payed_type",
+									"value": "allinpay",
+									"description": "支付方式：通联支付",
+									"type": "text"
+								},
+								{
+									"key": "trade_type",
+									"value": "A01",
+									"description": "调用方式：W02 微信JSAPI 支付，A01支付宝扫码支付，A022 支付宝JS支付，A023 线下扫码支付，",
+									"type": "text"
+								},
+								{
+									"key": "remark",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "quota_money",
+									"value": "22",
+									"description": "配置金额（单位：万）",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/order",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "发起支付宝支付",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "v",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/alipay?order_sn=alipayx1596372234",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"alipay"
+							],
+							"query": [
+								{
+									"key": "order_sn",
+									"value": "alipayx1596372234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登录",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/login?code=kkwwafkljasdflkj&scene=wechat",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "kkwwafkljasdflkj",
+									"description": "微信公众号授权code"
+								},
+								{
+									"key": "scene",
+									"value": "wechat",
+									"description": "固定值"
+								},
+								{
+									"key": "share_code",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改证劵账号",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "SessionId",
+								"value": "{{SESSIONID}}",
+								"type": "text"
+							},
+							{
+								"key": "V",
+								"value": "v2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "us_id",
+									"value": "8",
+									"description": "用户策略的ID",
+									"type": "text"
+								},
+								{
+									"key": "sec_id",
+									"value": "11",
+									"description": "证劵公司ID",
+									"type": "text"
+								},
+								{
+									"key": "account",
+									"value": "asddd",
+									"description": "账号",
+									"type": "text"
+								},
+								{
+									"key": "pwd",
+									"value": "2221",
+									"description": "密码",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/account",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "退款-详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/tixianinfo?order_id=478",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"tixianinfo"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "478"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "保证金提现（订单-增加order_id）",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "1",
+									"description": "提现账户类型 1银行卡 2支付宝",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "bank_id",
+									"value": "1",
+									"description": "银行卡id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "realname",
+									"value": "8",
+									"description": "姓名（类型为支付宝时，必填）",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "cardno",
+									"value": "xxxx1233121212121233",
+									"description": "账号（类型为支付宝时，必填）",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "order_id",
+									"value": "295",
+									"type": "text"
+								},
+								{
+									"key": "money",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/tixianbzj",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"tixianbzj"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "我的策略-增加订单id/状态",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "SessionId",
+								"value": "{{SESSIONID}}",
+								"type": "text"
+							},
+							{
+								"key": "V",
+								"value": "v2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/strategy/mine?is_commission=0",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"strategy",
+								"mine"
+							],
+							"query": [
+								{
+									"key": "is_commission",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "续费(订单状态为已结算：status=4，可续费)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "50",
+									"description": "续费/追加订单id",
+									"type": "text"
+								},
+								{
+									"key": "ntype",
+									"value": "1",
+									"description": "订单类型：1续费（默认），2追加",
+									"type": "text"
+								},
+								{
+									"key": "quota",
+									"value": "6",
+									"description": "配资ID ntype == 2时，必须上传",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "amount",
+									"value": "0.01",
+									"description": "充值金额 scene == rec时必须上传",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "scene",
+									"value": "pre",
+									"description": "场景；pre:策略下单",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "strategy",
+									"value": "4",
+									"description": "策略ID scene == pre时必须上传",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "level",
+									"value": "1",
+									"description": "代理商等级(获取代理商支付配置接口获取) scene == age时必须上传",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "up_level",
+									"value": "2",
+									"description": "升级代理商等级(获取代理商支付配置接口获取) scene == upg时必须上传",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "payed_type",
+									"value": "allinpay",
+									"description": "支付方式：通联支付",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "trade_type",
+									"value": "W02",
+									"description": "调用方式：W02 微信JSAPI 支付",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "remark",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quota_money",
+									"value": "22",
+									"description": "配置金额（单位：万）",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/neworder?id=410&ntype=1",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"neworder"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "410",
+									"description": "订单id"
+								},
+								{
+									"key": "ntype",
+									"value": "1",
+									"description": "订单类型：1续费（默认），2追加"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "追加（订单状态为已支付|已结算：status=2|4，可追加）",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "431",
+									"description": "订单id",
+									"type": "text"
+								},
+								{
+									"key": "ntype",
+									"value": "2",
+									"description": "订单类型：1续费（默认），2追加",
+									"type": "text"
+								},
+								{
+									"key": "quota",
+									"value": "2",
+									"description": "配资ID scene == pre时必须上传",
+									"type": "text"
+								},
+								{
+									"key": "quota_money",
+									"value": "",
+									"description": "配置金额",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/neworder",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"neworder"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "50",
+									"disabled": true
+								},
+								{
+									"key": "ntype",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户个人信息-未读信息数",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nickname",
+									"value": "123",
+									"description": "昵称",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "123",
+									"description": "地区",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "2020-09-08",
+									"description": "生日",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/read",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改个人信息(新)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nickname",
+									"value": "123",
+									"description": "昵称",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "123",
+									"description": "地区",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "2020-09-08",
+									"description": "生日",
+									"type": "text"
+								},
+								{
+									"key": "realname",
+									"value": "a",
+									"description": "姓名",
+									"type": "text"
+								},
+								{
+									"key": "zfb_account",
+									"value": "151111111195",
+									"description": "支付宝账号",
+									"type": "text"
+								},
+								{
+									"key": "zfb_realname",
+									"value": "ak",
+									"description": "支付宝姓名",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "15280073793",
+									"description": "手机号码",
+									"type": "text"
+								},
+								{
+									"key": "province",
+									"value": "12312",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "ads",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/editinfo",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"editinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "我的消息（返回content为json）",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "us_id",
+									"value": "8",
+									"description": "用户策略的ID",
+									"type": "text"
+								},
+								{
+									"key": "sec_id",
+									"value": "11",
+									"description": "证劵公司ID",
+									"type": "text"
+								},
+								{
+									"key": "account",
+									"value": "asddd",
+									"description": "账号",
+									"type": "text"
+								},
+								{
+									"key": "pwd",
+									"value": "2221",
+									"description": "密码",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJING}}dev/user/message",
+							"host": [
+								"{{API_DAHUJING}}dev"
+							],
+							"path": [
+								"user",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "我的消息-详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "us_id",
+									"value": "8",
+									"description": "用户策略的ID",
+									"type": "text"
+								},
+								{
+									"key": "sec_id",
+									"value": "11",
+									"description": "证劵公司ID",
+									"type": "text"
+								},
+								{
+									"key": "account",
+									"value": "asddd",
+									"description": "账号",
+									"type": "text"
+								},
+								{
+									"key": "pwd",
+									"value": "2221",
+									"description": "密码",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/message/66",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"message",
+								"66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "我的订单",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "SessionId",
+								"value": "{{SESSIONID}}",
+								"type": "text"
+							},
+							{
+								"key": "V",
+								"value": "v2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/order/my?page=1&limit=10&status=2",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"order",
+								"my"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "2",
+									"description": "状态；-1:失败；1:未支付；2:已支付 3:已取消 4:已结算(不论是否达标，待退保) 5:申请退款 6:退款成功 7:退款失败 8:已完结(结算且退保)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "订单详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "SessionId",
+								"type": "text",
+								"value": "{{SESSIONID}}"
+							},
+							{
+								"key": "V",
+								"type": "text",
+								"value": "v2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{API_DAHUJINGDEV}}user/order/28",
+							"host": [
+								"{{API_DAHUJINGDEV}}user"
+							],
+							"path": [
+								"order",
+								"28"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "当面付-支付回调-测试用",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "V",
+						"type": "text",
+						"value": "v2"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "trxreserve",
+							"value": "2020071715949733884033",
+							"type": "text"
+						},
+						{
+							"key": "trxstatus",
+							"value": "0000",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{API_DAHUJINGDEV}}callback/order/allinWechatx",
+					"host": [
+						"{{API_DAHUJINGDEV}}callback"
+					],
+					"path": [
+						"order",
+						"allinWechatx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "发送短信验证",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "V",
+						"type": "text",
+						"value": "v2"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobile",
+							"value": "15280073795",
+							"type": "text"
+						},
+						{
+							"key": "event",
+							"value": "verifyMobile",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{API_DAHUJINGDEV}}user/sms",
+					"host": [
+						"{{API_DAHUJINGDEV}}user"
+					],
+					"path": [
+						"sms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "支付宝-支付回调-测试用(未)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "V",
+						"type": "text",
+						"value": "v2"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{API_DAHUJINGDEV}}callback/order/alipay",
+					"host": [
+						"{{API_DAHUJINGDEV}}callback"
+					],
+					"path": [
+						"order",
+						"alipay"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5da6308b-81da-4871-9d18-633003dfa8db",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7d59d31a-2091-4480-97da-4c18243149ad",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

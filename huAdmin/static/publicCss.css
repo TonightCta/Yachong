@@ -1,0 +1,55 @@
+*{
+  margin:0;
+  padding: 0;
+}
+.el-menu{
+  border:0;
+}
+.el-aside{
+  width: auto!important;
+}
+.el-header{
+  padding: 0;
+}
+.el-tabs__header{
+  margin: 0;
+}
+.el-tabs__nav .is-active{
+  color:#0588ff!important;
+}
+.el-main{
+  padding: 0;
+}
+.el-breadcrumb{
+  line-height: 60px;
+  font-size: 15px;
+}
+.el-form-item__content{
+  text-align: left;
+  margin-left: 0;
+}
+ul{
+  list-style: none;
+}
+.el-icon-loading{
+  color:#ffd04b!important;
+  margin-top: 12px;
+}
+.el-menu-item-group__title{
+  display: none;
+}
+.el-submenu .el-menu-item{
+  background: #3b4044!important;
+  box-sizing: border-box;
+  padding-left: 65px!important;
+}
+.el-menu-item:hover{
+  background: black!important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,169 @@
+*{
+  padding: 0;
+  margin:0;
+}
+html,body{
+  font-size: 62.5%;
+  background: #f3f5f9;
+  font-family: '苹方' ,Helvetica, Arial, sans-serif;
+}
+input,button{
+  border:0;
+  outline: none;
+  background:white;
+  border-radius: 0;
+}
+button{
+  -webkit-appearance: none;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+input{
+  background: #eee;
+  border:0!important;
+}
+ul,li{
+  list-style: none;
+}
+span{
+  display: inline-block;
+  height: auto
+}
+.van-field{
+  border-radius: 30px;
+  height: .3rem;
+  line-height: .2rem;
+}
+.van-cell{
+  padding: 6px 16px;
+}
+.van-step--horizontal {
+  height: .5rem;
+}
+.van-step--horizontal:first-child .van-step__title{
+  position: absolute;
+  bottom: -.22rem;
+  left:0;
+  text-align: left;
+  font-size: .13rem;
+}
+.van-step--horizontal .van-step__title{
+  position: absolute;
+  bottom: -.22rem;
+  text-align: center;
+  left:0;
+  font-size: .13rem;
+}
+.van-step--horizontal:last-child .van-step__title{
+  position: absolute;
+  width: .8rem;
+  bottom: -.22rem;
+  text-align: right;
+  left:-.8rem;
+  font-size: .13rem;
+}
+.van-step--horizontal .van-step__line{
+  height: 2px;
+}
+.van-step--horizontal .van-step__icon{
+  font-size: .13rem;
+}
+/* .van-dropdown-menu{
+  width: 50%;
+  margin:0 auto;
+}
+.van-dropdown-menu__bar{
+  border-radius: 15px;
+  line-height: 3rem;
+  border:1px solid #ccc;
+  height: 2rem;
+  font-size: 1.2rem;
+} */
+/* .van-dropdown-menu__title{
+  font-size: 1.2rem;
+  width: 80%;
+} */
+/* .van-cell__value{
+  position: absolute;
+  right:1rem;
+  top:50%;
+  margin-top: -14px;
+} */
+/* .van-dropdown-item__content{
+  background: rgba(0,0,0,0)
+}
+.van-dropdown-item__option{
+  width: 30%;
+  margin:0 auto;
+  position: relative;
+  font-size: 1.2rem;
+} */
+.van-overlay{
+  z-index: 1111!important;
+}
+.van-cell--clickable{
+  margin-top: .1rem;
+}
+.van-tabs--card .van-tabs__nav--card{
+  border-radius: 20px;
+  height: .24rem;
+  border-color:#eee!important;
+}
+.van-tabs--card .van-tabs__nav--card .van-tab--active{
+  border-radius: 20px;
+}
+.van-tabs--card .van-tabs__nav--card .van-tab{
+  border:0;
+  font-size: .12rem;
+}
+.el-input__inner{
+  width: 2.42rem!important;
+  height: .3rem!important;
+  border-radius: 15px!important;
+  text-align: center;
+  color:black!important;
+  background-color: #eee!important;
+}
+.mineBindCus .el-input__inner{
+  background: white!important;
+  font-size: .14rem;
+  width: 1.9rem!important;
+}
+.el-select-dropdown__item{
+  font-size: .13rem!important;
+  text-align: center;
+}
+.el-select-dropdown{
+  z-index: 2100!important;
+}
+.el-scrollbar .el-scrollbar__bar{
+  opacity: 1 !important;
+}
+input:disabled{
+    border: 1px solid #ccc;
+    background-color: white;
+    color:black;
+    opacity:1;
+}
+input[disabled]{
+    border: 1px solid #ccc;
+    background-color: white;
+    color:black;
+    opacity:1;
+}
+input::-webkit-input-placeholder {  	/* WebKit browsers */
+    color: #ccc;
+}
+input:-moz-placeholder {            	/* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+}
+input::-moz-placeholder {           	/* Mozilla Firefox 19+ */
+    color: #ccc;
+}
+input:-ms-input-placeholder {       	/* Internet Explorer 10+ */
+    color: #ccc;
+}

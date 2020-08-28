@@ -1,0 +1,366 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import NProgress from 'nprogress'
+import {goLogin,getToken} from '../assets/js/goLogin.js'
+import { UrlSearch } from '../assets/js/getCode.js'
+import {shareWX} from '../assets/js/share.js'
+import { GetUrlKey } from '../assets/js/getShare.js';
+import  store from '../assets/js/store.js'
+import {getUser} from '../assets/js/user.js'
+import Axios from 'axios'
+import {Taost} from 'vant'
+let Get = new UrlSearch();
+Vue.use(Router)
+const router=new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',//首页
+      component: resolve=>require(['@/views/home/home'],resolve),
+      meta:{isAllSize:false,title:'大虎鲸AI智投',color:1,keep:false}
+    },
+    {
+      path:'/ai',
+      name:'Ai',//AI
+      component:resolve=>require(['@/views/ai/ai'],resolve),
+      meta:{isAllSize:true,title:'Ai技术选股',keep:false}
+    },
+    {
+      path:'/w',
+      name:'W',//趋势反转
+      component:resolve=>require(['@/views/ai/W'],resolve),
+      meta:{isAllSize:true,title:'W底趋势反转',keep:false}
+    },
+    {
+      path:'/y',
+      name:'Y',//突破压力位
+      component:resolve=>require(['@/views/ai/Y'],resolve),
+      meta:{isAllSize:true,title:'通道突破',keep:false}
+    },
+    {
+      path:'/t',
+      name:'T',//通道突破
+      component:resolve=>require(['@/views/ai/T'],resolve),
+      meta:{isAllSize:true,title:'突破压力位',keep:false}
+    },
+    {
+      path:'/mine',
+      name:'Mine',//个人中心
+      component:resolve=>require(['@/views/mine/mine'],resolve),
+      meta:{isAllSize:false,title:'个人中心',color:2,keep:false}
+    },
+    {
+      path:'/order',
+      name:'Order',//我的订单
+      component:resolve=>require(['@/views/mine/order/order'],resolve),
+      meta:{isAllSize:true,title:'我的订单',keep:false}
+    },
+    {
+      path:'/myCus',
+      name:'MyCus',//代理中心
+      component:resolve=>require(['@/views/mine/myCus/myCus'],resolve),
+      meta:{isAllSize:true,title:'代理中心',keep:false}
+    },
+    {
+      path:'/wallet',
+      name:'Wallet',//我的钱包
+      component:resolve=>require(['@/views/mine/wallet/wallet'],resolve),
+      meta:{isAllSize:true,title:'我的钱包',keep:true}
+    },
+    {
+      path:'/message',
+      name:'Message',//消息中心
+      component:resolve=>require(['@/views/mine/message/message'],resolve),
+      meta:{isAllSize:true,title:'消息通知',keep:false}
+    },
+    {
+      path:'/mesDetails',
+      name:'MesDetails',
+      component:resolve=>require(['@/views/mine/message/mesDetails'],resolve),
+      meta:{isAllSize:true,title:'消息详情',keep:false}
+    },
+    {
+      path:'/bankCard',
+      name:'BankVard',//银行卡
+      component:resolve=>require(['@/views/mine/card/card'],resolve),
+      meta:{isAllSize:true,title:'银行卡管理',keep:false}
+    },
+    {
+      path:'/agentApp',
+      name:'AgentApp',//代理申请
+      component:resolve=>require(['@/views/mine/agentApplication/agentApp'],resolve),
+      meta:{isAllSize:true,title:'申请代理',keep:false}
+    },
+    {
+      path:'/starCon',
+      name:'StarCon',//涨停策略
+      component:resolve=>require(['@/views/starCon/starCon'],resolve),
+      meta:{isAllSize:true,title:'量化交易复合策略-超短线',keep:false}
+    },
+    {
+      path:'/signal',
+      name:'SignAl',//多空信号,
+      component:resolve=>require(['@/views/signal/signal'],resolve),
+      meta:{isAllSize:true,title:'多空信号',keep:false}
+    },
+    {
+      path:'/signalDetails',
+      name:'SignalDetails',//多空信号详情
+      component:resolve=>require(['@/views/signal/signalDetials'],resolve),
+      meta:{isAllSize:true,title:'多空信号',keep:false}
+    },
+    {
+      path:'/north',
+      name:'North',//北上资金
+      component:resolve=>require(['@/views/north/north'],resolve),
+      meta:{isAllSize:true,title:'北上资金',keep:false}
+    },
+    {
+      path:'/northDetails',
+      name:'NorthDetails',//北上资金内页
+      component:resolve=>require(['@/views/north/northDetails'],resolve),
+      meta:{isAllSize:true,title:'北上资金',keep:false}
+    },
+    {
+      path:'/logSearch',
+      name:'LogSearch',//历史回顾
+      component:resolve=>require(['@/views/log/logSearch'],resolve),
+      meta:{isAllSize:true,title:'历史回顾',keep:false}
+    },
+    {
+      path:'/logDetails',
+      name:'LogDetails',//历史回顾详情
+      component:resolve=>require(['@/views/log/logDetails'],resolve),
+      meta:{isAllSize:true,title:'历史回顾-',keep:false}
+    },
+    {
+      path:'/mineEdit',
+      name:'MineEdit',//资料编辑
+      component:resolve=>require(['@/views/mine/mineEdit'],resolve),
+      meta:{isAllSize:true,title:'资料编辑',keep:false}
+    },
+    {
+      path:'/radar',
+      name:'Radar',//蚜虫扫雷
+      component:resolve=>require(['@/views/home/radar/radar'],resolve),
+      meta:{isAllSize:true,title:'蚜虫扫雷',keep:false}
+    },
+    {
+      path:'/radarDetails',
+      name:'RadarDetails',//蚜虫扫雷内页
+      component:resolve=>require(['@/views/home/radar/radarDetails'],resolve),
+      meta:{isAllSize:true,title:'蚜虫扫雷',keep:false}
+    },
+    {
+      path:'/ful',
+      name:'Ful',//涨停策略
+      component:resolve=>require(['@/views/home/ful/ful'],resolve),
+      meta:{isAllSize:true,title:'涨停策略',keep:false}
+    },
+    {
+      path:'/fulDetails',
+      name:'FulDetiails',//涨停内页
+      component:resolve=>require(['@/views/home/ful/fulDetails'],resolve),
+      meta:{isAllSize:true,title:'连续涨停预测',keep:false}
+    },
+    {
+      path:'/fulDeLog',
+      name:'FuDeLog',//涨停策略历史
+      component:resolve=>require(['@/views/home/ful/fulDeLog'],resolve),
+      meta:{isAllSize:true,title:'涨停策略-历史',keep:false}
+    },
+    {
+      path:'/choosePer',//条件选股
+      name:'ChoosePer',
+      component:resolve=>require(['@/views/home/choosePer/choosePer'],resolve),
+      meta:{isAllSize:true,title:'条件选股',keep:false}
+    },
+    {
+      path:'/perDetails',
+      name:'PerDetails',//选股详情
+      component:resolve=>require(['@/views/home/choosePer/perDetails'],resolve),
+      meta:{isAllSize:true,title:'选股详情',keep:false}
+    },
+    {
+      path:'/perDetailsVip',
+      name:'PerDetailsVip',//优选选股
+      component:resolve=>require(['@/views/home/choosePer/perDetailsVip'],resolve),
+      meta:{isAllSize:true,title:'选股详情',keep:false}
+    },
+    {
+      path:'/vipList',
+      name:'VipList',//优选详情
+      component:resolve=>require(['@/views/home/choosePer/vipList'],resolve),
+      meta:{isAllSize:true,title:'优选详情',keep:false}
+    },
+    {
+      path:'/obaDe',
+      name:'ObaDe',//详细财务报表
+      component:resolve=>require(['@/views/home/radar/obaDe'],resolve),
+      meta:{isAllSize:true,title:'详细财务报告',keep:false}
+    },
+    {
+      path:'/delStor',//清除缓存,
+      name:'delStor',
+      component:resolve=>require(['@/views/delStorage'],resolve),
+      meta:{isAllSize:true}
+    },
+    {
+      path:'/userAge',//代理协议
+      name:'UserAge',
+      component:resolve=>require(['@/components/agent'],resolve),
+      meta:{isAllSize:true,title:'代理协议',keep:false}
+    },
+    {
+      path:'/userAgeTwo',//用户协议
+      name:'UserAgeTwo',
+      component:resolve=>require(['@/components/agentTwo'],resolve),
+      meta:{isAllSize:true,title:'用户协议',keep:false}
+    },
+    {
+      path:'/logStar',//历史策略
+      name:'LogStar',
+      component:resolve=>require(['@/views/mine/logStar'],resolve),
+      meta:{isAllSize:true,title:'历史策略',keep:false}
+    },
+    {
+      path:'/backDetails',//退款详情
+      name:'BackDetails',
+      component:resolve=>require(['@/views/mine/wallet/backDetails'],resolve),
+      meta:{isAllSize:true,title:'账单详情',keep:false}
+    },
+    {
+      path:'/orderDetails',//订单详情
+      name:'OrderDetails',
+      component:resolve=>require(['@/views/mine/order/orderDetails'],resolve),
+      meta:{isAllSize:true,title:'订单详情',keep:false}
+    },
+    {
+      path:'/orderBack',//退款详情,
+      name:'orderBack',
+      component:resolve=>require(['@/views/mine/order/orderBack'],resolve),
+      meta:{isAllSize:true,title:'退款详情',keep:false}
+    },
+    {
+      path:'/aliSuccess',//支付宝成功回调,
+      name:'AliSuccess',
+      component:resolve=>require(['@/views/alCallback/success'],resolve),
+      meta:{isAllSize:true,title:'支付成功',keep:false}
+    },
+    {
+      path:'/aliError',//支付宝失败回调,
+      name:'AliError',
+      component:resolve=>require(['@/views/alCallback/error'],resolve),
+      meta:{isAllSize:true,title:'支付失败',keep:false}
+    },
+    {
+      path:'/planeList',//股东减持计划
+      name:'PlaneList',
+      component:resolve=>require(['@/views/home/radar/planeList'],resolve),
+      meta:{isAllSize:true,title:'减持计划',keep:false}
+    }
+  ]
+});
+router.beforeEach((to,from,next)=>{
+  NProgress.start();
+  if(to.path==='/aliSuccess'||to.path==='/aliError'){
+    next()
+  }else{
+    //是否调用微信登陆
+    // if(window.localStorage.getItem('token')){
+    //   getToken()
+    // }else{
+    //   goLogin()
+    // }
+
+  }
+  next()
+});
+router.afterEach((to,from)=>{
+    NProgress.done();
+    if(window.localStorage.getItem('token')){
+      if(!store.state.userMes.mobile){
+        getUser()
+      }
+    }
+    if(Get.code){
+        let Uapi='/dev';//测试服
+        // let Uapi='/api';//正式服
+        Axios.get(Uapi+'/user/login?code='+Get.code+'&scene=wechat',{
+          headers:{
+            'v':'v2'
+          }
+        }).then((res)=>{
+          if(res.data.state==1){
+            Axios.get(Uapi+'/user/read',{
+              headers:{
+                'Authorization':res.data.data.token,
+                'sessionId':res.data.data.sessionid,
+                'v':'v2'
+              }
+            }).then(response=>{
+              if(response.data.state==1){
+                let wxMes={};
+                if(to.meta.title==='大虎鲸AI智投'){
+                    wxMes={
+                      title:to.meta.title,
+                      desc:'大虎鲸AI智能交易系统，让交易更简单，让投资更有价值',
+                      link:`http://m.dahujing.com/?share_code=${response.data.data.share_code}&path=${to.path}/#${to.path}`,
+                      type:'link'
+                    };
+                }else{
+                  let para={
+                    codeID:GetUrlKey('codeID',window.location.href),//
+                    code:GetUrlKey('code',window.location.href),//多空信号code
+                    rode:GetUrlKey('codeRadar',window.location.href),//多空信号code
+                    title:GetUrlKey('title',window.location.href),//多空信号
+                    id:GetUrlKey('id',window.location.href),//策略ID
+                    aid:GetUrlKey('aiT',window.location.href),
+                    log:GetUrlKey('log',window.location.href)
+                  }
+                  wxMes={
+                    title:'大虎鲸AI智投-'+to.meta.title,
+                    desc:'大虎鲸AI智能交易系统，让交易更简单，让投资更有价值',
+                    link:`http://m.dahujing.com/?share_code=${response.data.data.share_code}&path=${to.path}&codeSign=${para.code}&strID=${para.id}&north=${para.codeID}&radar=${para.rode}&ai=${para.aid}&log=${para.log}&ac=1/#${to.path}`,
+                    type:'link'
+                  };
+                  // alert(JSON.stringify(wxMes))
+                };
+                shareWX(wxMes);
+              }
+            })
+          }
+        }).catch((err)=>{
+          Toast('Code登录错误')
+        })
+    }else{
+      let wxMes={};
+      if(to.meta.title==='大虎鲸AI智投'){
+          wxMes={
+            title:to.meta.title,
+            desc:'大虎鲸AI智能交易系统，让交易更简单，让投资更有价值',
+            link:`http://m.dahujing.com/?share_code=${window.localStorage.getItem('shareCode')}&path=${to.path}/#${to.path}`,
+            type:'link'
+          };
+      }else{
+        let para={
+          codeID:GetUrlKey('codeID',window.location.href),//
+          code:GetUrlKey('code',window.location.href),//多空信号code
+          rode:GetUrlKey('codeRadar',window.location.href),//多空信号code
+          title:GetUrlKey('title',window.location.href),//多空信号
+          id:GetUrlKey('id',window.location.href),//策略ID
+          aid:GetUrlKey('aiT',window.location.href),
+          log:GetUrlKey('log',window.location.href)
+        }
+        wxMes={
+          title:'大虎鲸AI智投-'+to.meta.title,
+          desc:'大虎鲸AI智能交易系统，让交易更简单，让投资更有价值',
+          link:`http://m.dahujing.com/?share_code=${window.localStorage.getItem('shareCode')}&path=${to.path}&codeSign=${para.code}&strID=${para.id}&north=${para.codeID}&radar=${para.rode}&ai=${para.aid}&log=${para.log}&ac=1/#${to.path}`,
+          type:'link'
+        };
+        // alert(JSON.stringify(wxMes))
+      };
+      shareWX(wxMes);
+    }
+})
+export default router;
